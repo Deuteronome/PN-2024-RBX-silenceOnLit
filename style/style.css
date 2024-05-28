@@ -1,0 +1,67 @@
+/*Réglages généraux */
+@font-face {
+    font-family: "bratsy";
+    src: url('./bratsy.ttf');
+}
+
+@font-face {
+    font-family: 'custom';
+    src: url('./caviar.ttf');
+}
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'custom', sans-serif;
+}
+
+/*header*/
+
+
+
+#header-haut {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #656565;
+    color : #ffffff;
+    margin : 0px;
+    padding :15px;
+    width : 100vw;
+    height: 23vh;
+}
+
+#header-logo {
+    width : 25vw;
+}
+
+#header-titre {
+    width : 50vw;
+}
+
+#header-login {
+    width : 25vw;
+}
+
+
+h1 {
+    color : #e0a0e3;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'custom', sans-serif;
+}
+
+#logo {
+    height : 16vh;
+}
+
+/*mise en forme de formulaire*/
+
+input, label {
+    display : block;
+    margin-top: 3px;
+}
