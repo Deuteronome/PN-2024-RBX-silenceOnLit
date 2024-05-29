@@ -8,14 +8,20 @@
     font-family: 'custom';
     src: url('./caviar.ttf');
 }
+
 * {
     margin: 0;
     padding : 0;
     box-sizing: border-box;
+    --color-vert: #B5C18E ;
+    --color-clair: #EADBC8;
+    --color-fonce: #C7B7A3;
+    --color-blanc: #F1F1F1;
 }
 
 body {
     font-family: 'custom', sans-serif;
+    background-color: var(--color-clair);
 }
 
 /*header*/
@@ -27,41 +33,129 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #656565;
-    color : #ffffff;
+    background-color: var(--color-clair);
+    color : var(--color-fonce);
     margin : 0px;
     padding :15px;
     width : 100vw;
-    height: 23vh;
+    hedisplay : block;ight: 23vh;
 }
 
 #header-logo {
-    width : 25vw;
+    width : 20vw;
+    display : flex;
+    flex-direction:column ;
+    justify-content : center ;
+    align-items: center ;
 }
 
 #header-titre {
-    width : 50vw;
+    width : 55vw;
+    display : flex;
+    flex-direction:column ;
+    justify-content : center ;
+    align-items: center ;
 }
 
 #header-login {
     width : 25vw;
-}
+    border: var(--color-vert)solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--color-blanc);
+    color : var(--color-vert);
+} 
 
 
 h1 {
-    color : #e0a0e3;
+    
     font-size: 2.5rem;
     text-shadow: 1px 1px 2px black;
-    font-family: 'custom', sans-serif;
+}
+
+h3 {
+    
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px black;
+    
 }
 
 #logo {
     height : 16vh;
+    display : block;
 }
 
+/* Barre sous le header avec image de fond*/
+#header-bas {
+    width : 100vw;
+    height:10vh;
+    background-image:url('../assets/books.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y:center;
+    border-top: var(--color-fonce) solid 3px;
+    border-bottom: var(--color-fonce) solid 3px;
+
+}
 /*mise en forme de formulaire*/
 
 input, label {
     display : block;
     margin-top: 3px;
+    width : 100%;
+    
 }
+
+/*partie centrale */
+#central {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+/*menu*/
+
+nav {
+    width : 20vw;
+    height: 60vh;
+    background-color: var(--color-fonce);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 2px 2px 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bouton {
+    text-decoration: none;
+    color: var(--color-vert);
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display : block;
+    padding: 15px;
+    background-color: var(--color-clair);
+    width : 80%;
+    border-radius: 20px;
+    box-shadow: black 2px 2px 10px 0;
+    
+    transition: box-shadow 300ms, color 1000ms, background-color 500ms, width 1000ms, padding 1000ms;
+
+}
+
+.bouton:hover {
+    box-shadow: black 7px 7px 20px 0;
+    color: var(--color-clair);
+    background-color: var(--color-vert);
+    width : 85%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    
+}
+
+/*le choix de site */
+
+
+/*la sélection de livre */
