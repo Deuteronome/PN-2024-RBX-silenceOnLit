@@ -13,15 +13,19 @@
     margin: 0;
     padding : 0;
     box-sizing: border-box;
-    --color-vert: #B5C18E ;
-    --color-clair: #EADBC8;
-    --color-fonce: #C7B7A3;
-    --color-blanc: #F1F1F1;
+    --color-pal-1: #42526F ;
+    --color-pal-2: #6E879E;
+    --color-pal-3: #9EB6D0;
+    /*--color-pal-4: #F1F1F1;*/
+    --color-light-default : #D9E8F7;
+    --color-dark-default : #2A2D34;
+
 }
 
 body {
     font-family: 'custom', sans-serif;
-    background-color: var(--color-clair);
+    background-color: var(--color-light-default);
+    color : var(--color-dark-default);
 }
 
 /*header*/
@@ -32,13 +36,12 @@ body {
     display : flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: var(--color-clair);
-    color : var(--color-fonce);
+    align-items: center;    
+    color : var(--color-pal-1);
     margin : 0px;
     padding :15px;
     width : 100vw;
-    hedisplay : block;ight: 23vh;
+    height: 23vh;
 }
 
 #header-logo {
@@ -59,28 +62,28 @@ body {
 
 #header-login {
     width : 25vw;
-    border: var(--color-vert)solid 3px;
+    border: var(--color-pal-1)solid 3px;
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--color-blanc);
-    color : var(--color-vert);
+    background-color: var(--color-pal-3);
+    color : var(--color-pal-1);
 } 
 
 
 h1 {
-    
+    color: var(--color-pal-2);
     font-size: 2.5rem;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px var(--color-dark-default);
 }
 
 h3 {
-    
+    color: var(--color-pal-2);
     font-size: 2rem;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px var(--color-dark-default);
     
 }
 
-#logo {
+#logo {    
     height : 16vh;
     display : block;
 }
@@ -88,14 +91,13 @@ h3 {
 /* Barre sous le header avec image de fond*/
 #header-bas {
     width : 100vw;
-    height:10vh;
-    background-image:url('../assets/books.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    height:10vh;    
+    background-image:url('../assets/books.png');
+    background-repeat: repeat-x;
+    background-size: contain;
     background-position: center;
-    background-position-y:center;
-    border-top: var(--color-fonce) solid 3px;
-    border-bottom: var(--color-fonce) solid 3px;
+    background-position-y:center;    
+    border-bottom: var(--color-pal-1) solid 3px;
 
 }
 /*mise en forme de formulaire*/
@@ -119,7 +121,7 @@ input, label {
 nav {
     width : 20vw;
     height: 60vh;
-    background-color: var(--color-fonce);
+    background-color: var(--color-pal-2);
     border-radius: 0 0 15px 15px;
     box-shadow: 2px 2px 5px 0;
     display: flex;
@@ -130,28 +132,25 @@ nav {
 
 .bouton {
     text-decoration: none;
-    color: var(--color-vert);
+    color: var(--color-pal-1);
     text-align: center;
     font-weight: 800;
     font-size: 1.2rem;
     display : block;
     padding: 15px;
-    background-color: var(--color-clair);
+    background-color: var(--color-pal-3);
     width : 80%;
     border-radius: 20px;
-    box-shadow: black 2px 2px 10px 0;
+    box-shadow: var(--color-dark-default) 2px 2px 10px 0;
     
-    transition: box-shadow 300ms, color 1000ms, background-color 500ms, width 1000ms, padding 1000ms;
+    transition: box-shadow 300ms, color 1500ms, background-color 300ms;
 
 }
 
 .bouton:hover {
-    box-shadow: black 7px 7px 20px 0;
-    color: var(--color-clair);
-    background-color: var(--color-vert);
-    width : 85%;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    box-shadow:none ;
+    color: var(--color-pal-3);
+    background-color: var(--color-pal-1);
     
 }
 
