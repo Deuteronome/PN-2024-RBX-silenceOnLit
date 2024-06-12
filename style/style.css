@@ -293,3 +293,43 @@ footer>div {
     width: 25%;
     padding: 10px;
 }
+
+/* la page de jeux */
+
+.select-zone {
+    width : 100%;
+    
+}
+
+
+#game-select {
+    width : 80%;
+    margin : 15px 0;
+}
+
+.apparence-zone {
+    padding: 20px;
+    background-color: var(--color-transparent);
+    box-shadow: var(--color-dark-default) 5px 5px 10px 0;
+    margin-bottom: 3vh;
+}
+
+.game-zone {
+    width: 100%;
+}
+
+.numberZone {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.numberChoice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
