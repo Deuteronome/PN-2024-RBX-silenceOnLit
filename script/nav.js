@@ -3,7 +3,7 @@ export function navFunction() {
     let bouton = document.querySelector('#burger-button');
     let menu = document.querySelector('nav');
     let isDown = false;
-
+    
     //Définir les fonctions/actions qui vont être utilisées
 
     function navDown () {

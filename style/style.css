@@ -318,6 +318,8 @@ footer>div {
     width: 100%;
 }
 
+/* le juste nombre */
+
 .numberZone {
     display: flex;
     flex-direction: column;
@@ -332,4 +334,8 @@ footer>div {
     align-items: center;
 }
 
+.responseLine {
+    font-weight: 700;
+    margin: 15px 0;
+}
 
