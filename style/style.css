@@ -194,8 +194,8 @@ nav {
 main {
     position: relative;
     top : 33vh;
-    left : 20vw;
-    width : 80vw;
+    
+    width : 100vw;
     padding : 30px 5vw;
     display : flex;
     flex-direction: column;
@@ -339,3 +339,33 @@ footer>div {
     margin: 15px 0;
 }
 
+/* Mise en page du morpion */
+
+.ttd-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.grid-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    
+}
+
+.square {
+    width : 30%;
+    aspect-ratio: 1;
+    background-color: #ffffff;
+    border: #000000 solid 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.square:hover {
+    background-color: #c1c1c1;
+}

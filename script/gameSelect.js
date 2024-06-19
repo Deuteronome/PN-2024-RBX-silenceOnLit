@@ -1,4 +1,5 @@
 import { rightNumber } from "./rightNumber.js";
+import { ticTacDoe } from "./ticTacDoe.js";
 
 export function gameSelect() {
     //récupérer les  élèments dont on a besoin :
@@ -12,7 +13,12 @@ export function gameSelect() {
        
 
        switch(choiceNumber) {
+            case '3':
+                reset();                
+                ticTacDoe(gameZone);
+                break;
             case '2':
+                reset();
                 rightNumber(gameZone);
                 break;
             default:
@@ -24,7 +30,7 @@ export function gameSelect() {
 
     function reset() {
         gameZone.innerHTML = "";
-        gameZone.classList.remove("apparence-zone");
+        gameZone.setAttribute("class", "game-zone");
     }
 
     //déclencheur
