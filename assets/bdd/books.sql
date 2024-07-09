@@ -265,3 +265,23 @@ VALUES (2, 3),
         (24, 2),
         (25, 2),
         (26, 2);
+
+SELECT Books.title, Authors.name, Genres.name, Books.published_at FROM Books
+INNER JOIN Genres ON Books.genre_id = Genres.id
+INNER JOIN Books_authors ON Books_authors.book_id = Books.id
+INNER JOIN Authors ON Authors.id = Books_authors.author_id;
+
+
+SELECT Books.title AS Titre, Authors.name AS Auteur, Genres.name AS Genre, DATE_FORMAT(Books.published_at, '%Y') AS Date FROM Books
+INNER JOIN Genres ON Books.genre_id = Genres.id
+INNER JOIN Books_authors ON Books_authors.book_id = Books.id
+INNER JOIN Authors ON Authors.id = Books_authors.author_id
+ORDER BY Date DESC;
+
+
+CREATE VIEW book_list_vw AS 
+(SELECT Books.id AS book_id, Genres.id AS genre_id, Authors.id AS author_id,Books.title AS Titre, Authors.name AS Auteur, Genres.name AS Genre, DATE_FORMAT(Books.published_at, '%Y') AS Date, Books.pages AS Pages, Books.format AS Format  FROM Books
+INNER JOIN Genres ON Books.genre_id = Genres.id
+INNER JOIN Books_authors ON Books_authors.book_id = Books.id
+INNER JOIN Authors ON Authors.id = Books_authors.author_id
+ORDER BY Date DESC);

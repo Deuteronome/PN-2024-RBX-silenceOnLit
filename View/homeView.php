@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silence on lit!</title>
-    <link rel="icon" href="./assets/logo.png">
-    <link rel="stylesheet" href="./style/style.css">
-    <script type="module" src="./script/home.js"></script>
+    <?php include('../_partials/_head.php'); ?>
+    <script type="module" src="../script/home.js" defer></script>
+</head>
    
 <body>
     <!-- L'en-tête du site -->
-    <header>
-        <div id="header-haut">
-            <div id="header-logo">
-                <img id="logo" src="./assets/logo.png" alt="Logo">
-            </div>
-            
-            <div id="header-titre">
-                <h1>Silence On lit!</h1>
-                <h3>Accueil</h3>
-            </div>
-            
-            <!-- Formule de connexion -->
-            <div id="header-login">
-                <form action="#" method="#">
-                    <label for="identifiant">Identifiant</label>
-                    
-                    <input type="text" id="identifiant" name="identifiant" placeholder="Mettez votre pseudo">
-                    
-                    <label for="password">Mot de passe</label>
-                    
-                    <input type="password" id="password" name="password">
-                    
-                </form>
-            </div>
-        </div>
-        <div id="header-bas">
-            <div id="burger-button"></div>
-        </div>
-    </header>
+    <?php
+        include_once('../_partials/_header.php');
+        include_once('../_partials/_nav.php')
+    ?>
 
     <div id="central">
-        <!--Menu - il va pas rester-->
-        <nav>
-            <a href="./index.htm" target="_self" class="bouton">Accueil</a>
-            <a href="./pages/jeux.htm" target="_self" class="bouton">Détente</a>
-            <a href="./pages/compte.htm" target="_self" class="bouton">Mon Compte</a>
-            
-        </nav>
+        
+        
         <!-- Partie principale avec le texte de pserentation et les sites de l'e2c-->
         <main>
             <article>
@@ -112,39 +79,7 @@
     </div>
 
     <!-- Pied de page-->
-    <footer>
-  
-        
-            <div>
-                <p>Site d'Armentières</p>
-                <p>8 rue Philippe de Girard</p>
-                <p>59280 Armentières</p>
-                <p>📞 : 03 28 52 90 50</p>
-            </div>
-
-            <div>
-                <p>Site de Lille</p>
-                <p>48 rue des canonniers</p>
-                <p>59000 Lille</p>
-                <p>📞 : 03 20 63 30 80</p>
-            </div>
-
-            <div>
-                <p>Site de Roubaix</p>
-                <p>45 boulevard du général Leclerc</p>
-                <p>59100 Roubaix</p>
-                <p>📞 : 03 28 07 59 80</p>
-            </div>
-            
-            <div>
-                <p>Site de Saint-Omer</p>
-                <p>17 rue Allent</p>
-                <p>62500 Saint-Omer</p>
-                <p>📞 : 03 28 52 90 60</p>
-            </div>
-        
-            
-    </footer>
+    <?php include_once('../_partials/_footer.php'); ?>
 
 </body>
 </html>
