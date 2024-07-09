@@ -55,18 +55,26 @@
             </article>
 
             <div id="sites">
-                <div class="site" id="arm">
-                    <p class="nom-site">Armentières</p>
-                </div>
-                <div class="site" id="lil">
-                    <p class="nom-site">Lille</p>
-                </div>
-                <div class="site" id="rbx">
-                    <p class="nom-site">Roubaix</p>
-                </div>
-                <div class="site" id="sto">
-                    <p class="nom-site">Saint-omer</p>
-                </div>
+                <a href="../Controller/library.php?site=Armentières">
+                    <div class="site" id="arm">
+                        <p class="nom-site">Armentières</p>
+                    </div>
+                </a>
+                <a href="../Controller/library.php?site=Lille">
+                    <div class="site" id="lil">
+                        <p class="nom-site">Lille</p>
+                    </div>
+                </a>
+                <a href="../Controller/library.php?site=Roubaix">
+                    <div class="site" id="rbx">
+                        <p class="nom-site">Roubaix</p>
+                    </div>
+                </a>
+                <a href="../Controller/library.php?site=Saint-Omer">
+                    <div class="site" id="sto">
+                        <p class="nom-site">Saint-omer</p>
+                    </div>
+                </a>
             </div>
         </main>
         <!-- la partie latérale (droite) -avec une séléction de livre-->

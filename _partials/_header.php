@@ -11,7 +11,7 @@
             
             <!-- Formule de connexion -->
             <div id="header-login">
-                <form action="#" method="#">
+                <form action="../Controller/login.php" method="post">
                     <label for="identifiant">Identifiant</label>
                     
                     <input type="text" id="identifiant" name="identifiant" placeholder="Mettez votre pseudo">
@@ -19,6 +19,8 @@
                     <label for="password">Mot de passe</label>
                     
                     <input type="password" id="password" name="password">
+
+                    <input type="submit" value="Se Connecter">
                     
                 </form>
             </div>

@@ -194,14 +194,14 @@ nav {
 main {
     position: relative;
     top : 33vh;
-    
+    min-height: 57.5vh;
     width : 100vw;
     padding : 30px 5vw;
     display : flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-}
+}pull
 /*le texte de présentation*/
 article {
     padding: 20px;
@@ -261,7 +261,7 @@ iframe {
 }
 
 #rbx {
-    background-image: url('../assets/e2cRoubaix.png') ;
+    background-image: url('../assets/e2cRoubaixMono.png') ;
 }
 
 #sto {
