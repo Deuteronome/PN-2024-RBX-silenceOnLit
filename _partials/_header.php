@@ -11,18 +11,40 @@
             
             <!-- Formule de connexion -->
             <div id="header-login">
-                <form action="../Controller/login.php" method="post">
-                    <label for="identifiant">Identifiant</label>
-                    
-                    <input type="text" id="identifiant" name="identifiant" placeholder="Mettez votre pseudo">
-                    
-                    <label for="password">Mot de passe</label>
-                    
-                    <input type="password" id="password" name="password">
+                <?php 
+                    if(isset($_SESSION['userId'])) {
+                        ?>
+                            <h3>Bonjour <?= $_SESSION['identifier'] ?></h3>
 
-                    <input type="submit" value="Se Connecter">
-                    
-                </form>
+                            <a href="../Controller/logout.php" class="bouton">Se déconnecter</a>
+                        <?php
+                    } else {
+                        ?>
+                            <form action="../Controller/login.php" method="post">
+                                <label for="identifiant">Identifiant</label>
+                                
+                                <input type="text" id="identifiant" name="identifiant" placeholder="Mettez votre pseudo">
+                                
+                                <label for="password">Mot de passe</label>
+                                
+                                <input type="password" id="password" name="password">
+                                
+                                <?php
+                                    if(isset($_GET['message'])) {
+                                        ?>
+                                            <p class='alert-message'><?= $_GET['message'] ?></p>
+                                        <?php                            
+                                    }
+                                ?>                            
+
+
+                                <input type="submit" value="Se Connecter">
+                                
+                            </form>
+                        <?php
+                    }
+                ?>
+                
             </div>
         </div>
         <div id="header-bas">

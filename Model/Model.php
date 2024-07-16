@@ -24,5 +24,25 @@ class Model
 
         return $req;
     }
+
+    public function getSiteById(int $id) {
+      $sqlQuery = "SELECT id, city FROM Sites WHERE id= :id";
+      $statement =  $this->bdd->prepare($sqlQuery);
+      $statement->execute([
+        'id' => $id
+      ]);
+      $req = $statement -> fetch();
+
+      return $req;
+    }
+
+    public function getAllBooks () {
+      $sqlQuery = "SELECT * FROM book_list_vw";
+      $statement =  $this->bdd->prepare($sqlQuery);
+      $statement->execute([]);
+      $req = $statement -> fetchAll();
+
+      return $req;
+    }
     
 }
