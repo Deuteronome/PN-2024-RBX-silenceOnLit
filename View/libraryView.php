@@ -22,10 +22,12 @@
                foreach($bookList as $book) {
                 ?>
                     <div class="book-row">
-                        <div class="book-title"><?= $book['Titre'] ?></div>
-                        <div class="book-author"><?= $book['Auteur'] ?></div>
-                        <div class="book-genre"><?= $book['Genre'] ?></div>
-                        <div class="book-year"><?= $book['Date'] ?></div>
+                        <a href="../Controller/bookDetail.php?bookId=<?= $book['book_id']?>&siteId=<?= $_GET['siteId'] ?>">
+                            <div class="book-title"><?= $book['Titre'] ?></div>
+                            <div class="book-author"><?= $book['Auteur'] ?></div>
+                            <div class="book-genre"><?= $book['Genre'] ?></div>
+                            <div class="book-year"><?= $book['Date'] ?></div>
+                        </a>
                     </div>
                 <?php
                 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <?php include_once('../_partials/_head.php') ?>
     <script type="module" src="../script/home.js" defer></script>

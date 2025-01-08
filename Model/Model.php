@@ -7,7 +7,7 @@ class Model
     public function __construct()
     {
       try {
-        $this->bdd = new PDO('mysql:host=localhost;dbname=books_e2c;charset=utf8','book_user','3kEW22Fe6rYzz5');
+        $this->bdd = new PDO('mysql:host=localhost;dbname=books_e2c;charset=utf8','book_user','H80x4c!ErM1CaSm_');
       }catch(Exception $e) {
         die($e->getMessage());
       }   
@@ -41,6 +41,21 @@ class Model
       $statement =  $this->bdd->prepare($sqlQuery);
       $statement->execute([]);
       $req = $statement -> fetchAll();
+
+      return $req;
+    }
+
+    public function getBookById(int $id) {
+      $sqlQuery = "SELECT Books.title, Books.publishing_house AS edition, DATE_FORMAT(Books.published_at, '%Y') AS date, Books.format, Books.pages, Books.synopsis, Books.picture, Books.borrower_id AS loan, Authors.name AS author, Genres.name AS genre FROM Books
+      INNER JOIN Genres ON Books.genre_id = Genres.id
+      INNER JOIN Books_authors ON Books.id = Books_authors.book_id
+      INNER JOIN Authors ON Authors.id = Books_authors.author_id
+      WHERE Books.id = :id";
+      $statement =  $this->bdd->prepare($sqlQuery);
+      $statement->execute([
+        'id' => $id
+      ]);
+      $req = $statement -> fetch();
 
       return $req;
     }
